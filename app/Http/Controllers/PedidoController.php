@@ -41,7 +41,7 @@ class PedidoController extends Controller
     //Por cada cerveza del carrito se asigna cerveza_id al pedido obtenido arriba
     foreach(\Cart::getContent() as $item)
     {
-      $pedido->cervezas()->attach($item->model->id, ['cantidad' => $item->quantity]); //$item->model->id es cerveza_id
+      $pedido->libros()->attach($item->model->id, ['cantidad' => $item->quantity]); //$item->model->id es cerveza_id
     }
 
     //Se vacía el carrito y se eliminan las condiciones por si se desea hacer otro pedido

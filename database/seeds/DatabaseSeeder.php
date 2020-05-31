@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         'tarjetas',
         'libros',
         'pedidos',
-        'editors'
+        'editors',
+        'libro_pedido'
       ]);
         
       $this->call(ClientesSeeder::class);
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
       $this->call(LibroSeeder::class);
       $this->call(PedidoSeeder::class);
       $this->call(EditorSeeder::class);
+      $this->call(LibroPedidoSeeder::class);
     }
 
     protected function truncatetables(array $tables) // Tablas de areglo que queremos vaciar

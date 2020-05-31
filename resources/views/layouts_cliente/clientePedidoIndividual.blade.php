@@ -57,12 +57,12 @@
                 <tbody>
                   @for($i=0; $i<$size; $i++)
                     <tr>
-                      <td><a href="#"><img src="{{$cervezas['modelo'][$i]->imagen}}" alt="{{$cervezas['modelo'][$i]->nombre}}"></a></td>
-                      <td><a href="#">{{$cervezas['modelo'][$i]->nombre}}</a></td>
-                      <td>{{$cervezas['cantidad'][$i]}}</td>
-                      <td>${{$cervezas['modelo'][$i]->precio}}</td>
+                      <td><a href="#"><img src="/img/imagenes_libros/{{$libros['modelo'][$i]->imagen}}.jpg" alt="{{$libros['modelo'][$i]->nombre}}"></a></td>
+                      <td><a href="#">{{$libros['modelo'][$i]->nombre}}</a></td>
+                      <td>{{$libros['cantidad'][$i]}}</td>
+                      <td>${{$libros['modelo'][$i]->precio}}</td>
                       <td>$0.00</td>
-                      <td>${{($cervezas['modelo'][$i]->precio)*($cervezas['cantidad'][$i])}}.00</td>
+                      <td>${{($libros['modelo'][$i]->precio)*($libros['cantidad'][$i])}}.00</td>
                     </tr>
                   @endfor
                 </tbody>

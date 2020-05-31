@@ -32,7 +32,7 @@
               <tr>
                 <td>
                   <a href="{{route('tienda.show', $item->id)}}">
-                    <img src="{{$item->model->imagen}}" alt="$item->model->nombre" class="fit-image">
+                    <img src="/img/imagenes_libros/{{$item->model->imagen}}.jpg" alt="$item->model->nombre" class="fit-image">
                   </a>
                 </td>
                 <td><a href="{{route('tienda.show', $item->id)}}">{{$item->model->nombre}}</a></td>
