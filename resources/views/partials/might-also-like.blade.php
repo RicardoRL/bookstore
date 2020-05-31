@@ -9,12 +9,12 @@
       <div class="product same-height">
         <div class="flip-container">
           <div class="flipper">
-            <div class="front"><a href="{{route('tienda.show', $sugerencia->id)}}"><img src="/img/imagenes_libros/{{$sugerencia->imagen}}" alt="{{$sugerencia->nombre}}" class="img-fluid"></a></div>
-            <div class="back"><a href="{{route('tienda.show', $sugerencia->id)}}"><img src="/img/imagenes_libros/{{$sugerencia->imagen}}" alt="{{$sugerencia->nombre}}" class="img-fluid"></a></div>
+            <div class="front"><a href="{{route('tienda.show', $sugerencia->id)}}"><img src="/img/imagenes_libros/{{$sugerencia->imagen}}.jpg" alt="{{$sugerencia->nombre}}" class="img-fluid"></a></div>
+            <div class="back"><a href="{{route('tienda.show', $sugerencia->id)}}"><img src="/img/imagenes_libros/{{$sugerencia->imagen}}.jpg" alt="{{$sugerencia->nombre}}" class="img-fluid"></a></div>
           </div>
         </div>
         <a href="{{route('tienda.show', $sugerencia->id)}}" class="invisible">
-          <img src="/img/imagenes_libros/{{$sugerencia->imagen}}" alt="" class="img-fluid">
+          <img src="/img/imagenes_libros/{{$sugerencia->imagen}}.jpg" alt="" class="img-fluid">
         </a>
         <div class="text">
           <h3>{{$sugerencia->nombre}}</h3>

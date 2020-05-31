@@ -22,8 +22,8 @@ class CreateLibrosTable extends Migration
           $table->string('idioma');
           $table->string('isbn');
           $table->decimal('precio', 11, 2);
-          $table->string('imagen');
           $table->text('descripcion');
+          $table->string('imagen');
           $table->softDeletes();
           $table->timestamps();
         });

@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-md-6 col-lg-3">
           <ul class="list-unstyled mb-3">
-          @for($i = 0; $i < getGeneros(); $i++)
+          @for($i = 0; $i < count(getGeneros()); $i++)
             <li class="nav-item">
-              <a href="{{route('tienda.porEstilo', getGeneros()[$i])}}" class="nav-link">
-                {{getGeneros()[$i]}}
+              <a href="{{route('tienda.porEstilo', getGeneros()[$i]->genero)}}" class="nav-link">
+                {{getGeneros()[$i]->genero}}
               </a>
             </li>
           @endfor

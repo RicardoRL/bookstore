@@ -36,19 +36,4 @@ class Cliente extends Authenticatable
   {
     return $this->hasOne('App\Tarjeta');
   }
-
-  public function setNombreAttribute($value)
-  {
-    $this->attributes['nombre'] = ucfirst($value);
-  }
-
-  public function setApepatAttribute($value)
-  {
-    $this->attributes['apepat'] = ucfirst($value);
-  }
-
-  public function setApematAttribute($value)
-  {
-    $this->attributes['apemat'] = ucfirst($value);
-  }
 }

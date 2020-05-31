@@ -31,6 +31,6 @@ class ClientesSeeder extends Seeder
         'password' => Hash::make('123456789'),
         'telefono' => '3387592301'
       ]);
-      factory(Cliente::class, 10)->create();
+      factory(Cliente::class, 5)->create();
     }
 }

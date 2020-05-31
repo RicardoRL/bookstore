@@ -61,11 +61,11 @@ class ShopController extends Controller
       return view('layouts_tienda.tienda', compact('productos', 'generos', 'set'));
     }
 
-    public function porEstilo(Request $request, $estilo)
+    public function porEstilo(Request $request, $genero)
     {
       $generos = getGeneros();
 
-      $productos = Libro::where('estilo', $estilo)->get()->all();
+      $productos = Libro::where('genero', $genero)->get()->all();
 
       $set = paginator($request, $productos);
         

@@ -7,7 +7,7 @@
       <ul class="list-unstyled">
         <!-- foreach para los estilos-->
         @foreach($generos as $genero)
-          <li><a href="{{route('tienda.porEstilo', $genero->estilo)}}" class="nav-link">{{$genero->estilo}}</a></li>
+          <li><a href="{{route('tienda.porEstilo', $genero->genero)}}" class="nav-link">{{$genero->genero}}</a></li>
         @endforeach
       </ul>
     </div>

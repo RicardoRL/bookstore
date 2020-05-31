@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Cerveceria;
-use App\Cerveza;
+use App\Libro;
 use App\Evento;
 use App\Editor;
 
@@ -26,10 +26,10 @@ Route::get('/', function(){
 
 Route::get('/inicio', function() {
 
-    $cervezas = Cerveza::inRandomOrder()->take(10)->get();
-    $cervezas = $cervezas->all();
+    $libros = Libro::inRandomOrder()->take(5)->get();
+    $libros = $libros->all();
 
-    return view('layouts.content', compact('cervezas'));
+    return view('layouts.content', compact('libros'));
 })->name('inicio');
 
 
