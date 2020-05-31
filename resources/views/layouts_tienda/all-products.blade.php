@@ -20,18 +20,18 @@
                         <div class="flipper">
                             <div class="front">
                                 <a href="{{route('tienda.show', $producto['id'])}}">
-                                    <img src="{{$producto['imagen']}}" alt="" class="img-fluid">
+                                    <img src="/img/imagenes_libros/{{$producto['imagen']}}" alt="" class="img-fluid">
                                 </a>
                             </div>
                             <div class="back">
                                 <a href="{{route('tienda.show', $producto['id'])}}">
-                                    <img src="{{$producto['imagen']}}" alt="" class="img-fluid">
+                                    <img src="/img/imagenes_libros/{{$producto['imagen']}}" alt="" class="img-fluid">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <a href="#" class="invisible">
-                        <img src="{{$producto['imagen']}}" alt="" class="img-fluid">
+                        <img src="/img/imagenes_libros/{{$producto['imagen']}}" alt="" class="img-fluid">
                     </a>
                     <div class="text">
                         <h3><a href="{{route('tienda.show', $producto['id'])}}">{{$producto['nombre']}}</a></h3>

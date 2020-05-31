@@ -10,20 +10,20 @@
   </div>
   <div class="container">
     <div class="product-slider owl-carousel owl-theme">
-      @foreach($cervezas as $cerveza)
+      @foreach($libros as $libro)
       <div class="item">
         <div class="product">
           <div class="flip-container">
             <div class="flipper">
-              <div class="front"><a href="{{route('tienda.show', $cerveza->id)}}"><img src="{{$cerveza->imagen}}" alt="" class="img-fluid"></a></div>
-              <div class="back"><a href="{{route('tienda.show', $cerveza->id)}}"><img src="{{$cerveza->imagen}}" alt="" class="img-fluid"></a></div>
+              <div class="front"><a href="{{route('tienda.show', $libro->id)}}"><img src="/img/imagenes_libros/{{$libro->imagen}}" alt="" class="img-fluid"></a></div>
+              <div class="back"><a href="{{route('tienda.show', $libro->id)}}"><img src="/img/imagenes_libros/{{$libro->imagen}}" alt="" class="img-fluid"></a></div>
             </div>
           </div>
-          <a href="{{route('tienda.show', $cerveza->id)}}" class="invisible"><img src="{{$cerveza->imagen}}" alt="" class="img-fluid"></a>
+          <a href="{{route('tienda.show', $libro->id)}}" class="invisible"><img src="/img/imagenes_libros/{{$libro->imagen}}" alt="" class="img-fluid"></a>
           <div class="text">
-            <h3><a href="{{route('tienda.show', $cerveza->id)}}">{{$cerveza->nombre}}</a></h3>
+            <h3><a href="{{route('tienda.show', $libro->id)}}">{{$libro->nombre}}</a></h3>
             <p class="price"> 
-              <del></del>${{$cerveza->precio}}
+              <del></del>${{$libro->precio}}
             </p>
           </div>
         </div>

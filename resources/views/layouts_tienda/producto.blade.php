@@ -14,7 +14,7 @@
               @else
                 <li class="breadcrumb-item"><a href="{{route('cliente.index')}}">Inicio</a></li>
               @endguest
-              <li aria-current="page" class="breadcrumb-item active">Cerveza</li>
+              <li aria-current="page" class="breadcrumb-item active">Libro</li>
             </ol>
           </nav>
         </div>

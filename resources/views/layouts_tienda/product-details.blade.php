@@ -2,67 +2,59 @@
     <div id="productMain" class="row">
         <div class="col-md-6">
             <div class="item">
-                <img src="{{$cerveza->imagen}}" alt="" class="img-fluid">
+                <img src="/img/imagenes_libros/{{$libro->imagen}}" alt="" class="img-fluid">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-10">
             <div class="box">
                 <div class="card">
                     <div class="card-header">
-                        <h4>{{$cerveza->nombre}}</h4>
+                        <h4>{{$libro->nombre}}</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Estilo</th>
-                                        <td>{{$cerveza->estilo}}</td>
+                                        <th scope="row">Autor</th>
+                                        <td>{{$libro->autor}}</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Aspecto</th>
-                                        @if($cerveza->aspecto != 'NULL')
-                                          <td>{{$cerveza->aspecto}}</td>
+                                        <th scope="row">Género</th>
+                                        @if($libro->genero != 'NULL')
+                                          <td>{{$libro->genero}}</td>
                                         @else
                                           <td>-</td>
                                         @endif
                                     </tr>
                                     <tr>
-                                        <th scope="row">Sabor y aroma</th>
-                                        @if($cerveza->sabor_aroma != 'NULL')
-                                          <td>{{$cerveza->sabor_aroma}}</td>
+                                        <th scope="row">Editorial</th>
+                                        @if($libro->editorial != 'NULL')
+                                          <td>{{$libro->editorial}}</td>
                                         @else
                                           <td>-</td>
                                         @endif
                                     </tr>
                                     <tr>
-                                        <th scope="row">Alcohol</th>
-                                        @if($cerveza->alcohol != 'NULL')
-                                          <td>{{$cerveza->alcohol}}</td>
+                                        <th scope="row">Idioma</th>
+                                        @if($libro->idioma != 'NULL')
+                                          <td>{{$libro->idioma}}</td>
                                         @else
                                           <td>-</td>
                                         @endif
                                     </tr>
                                     <tr>
-                                        <th scope="row">Temperatura de consumo</th>
-                                        @if($cerveza->temp_consumo != 'NULL')
-                                          <td>{{$cerveza->temp_consumo}}</td>
+                                        <th scope="row">ISBN</th>
+                                        @if($libro->isbn != 'NULL')
+                                          <td>{{$libro->isbn}}</td>
                                         @else
                                           <td>-</td>
                                         @endif
                                     </tr>
                                     <tr>
-                                        <th scope="row">Maridaje</th>
-                                        @if($cerveza->maridaje != 'NULL')
-                                          <td>{{$cerveza->maridaje}}</td>
-                                        @else
-                                          <td>-</td>
-                                        @endif
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Presentación</th>
-                                        @if($cerveza->presentacion != 'NULL')
-                                          <td>{{$cerveza->presentacion}}</td>
+                                        <th scope="row">Descripción</th>
+                                        @if($libro->descripcion != 'NULL')
+                                          <td>{{$libro->descripcion}}</td>
                                         @else
                                           <td>-</td>
                                         @endif
@@ -72,13 +64,13 @@
                         </div>
                     </div>
                 </div>
-                <p class="price">${{$cerveza->precio}}</p>
+                <p class="price">${{$libro->precio}}</p>
                 @auth
                     <form action="{{route('cart.store')}}" method="POST">
                         @csrf
-                        <input type="hidden" name="id" value="{{$cerveza->id}}">
-                        <input type="hidden" name="name" value="{{$cerveza->nombre}}">
-                        <input type="hidden" name="price" value="{{$cerveza->precio}}">
+                        <input type="hidden" name="id" value="{{$libro->id}}">
+                        <input type="hidden" name="name" value="{{$libro->nombre}}">
+                        <input type="hidden" name="price" value="{{$libro->precio}}">
                         <p class="text-center buttons">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-shopping-cart"></i> Agregar al carro
